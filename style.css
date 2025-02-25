@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1E1E2F, #3A3A60);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+form {
+    margin: 20px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.05);
+}
+
+input, select, button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #D32F2F, #C2185B);
+    transform: scale(1.1);
+}
+
+#deleteStaff {
+    background: linear-gradient(135deg, #FF416C, #FF4B2B);
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#deleteStaff:hover {
+    background: linear-gradient(135deg, #B71C1C, #880E4F);
+    transform: scale(1.1);
+}
+
+#searchResult {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+    color: white;
+}
