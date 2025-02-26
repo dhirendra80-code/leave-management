@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })();
 
     const logo = document.createElement("img");
-    logo.src = window.location.origin + "/images/logo.png";
+    logo.src = window.location.origin + "/logo.png";
     logo.alt = "Leave Management System Logo";
     logo.style.width = "120px";
     logo.style.display = "block";
