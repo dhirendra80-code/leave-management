@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let staff = JSON.parse(localStorage.getItem("staffData")) || {};
     updateStaffList();
-    updateLeaveTable();
+   
 
     staffForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -78,16 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    function updateLeaveTable() {
-        leaveTable.innerHTML = "";
-        Object.keys(staff).forEach(staffName => {
-            staff[staffName].leaves.forEach(date => {
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${staffName}</td><td>${staff[staffName].position}</td><td>${date}</td>`;
-                leaveTable.appendChild(row);
-            });
-        });
-    }
+    
 
     function saveToLocalStorage() {
         localStorage.setItem("staffData", JSON.stringify(staff));
@@ -136,4 +127,21 @@ document.addEventListener("DOMContentLoaded", function() {
     logo.style.margin = "20px auto";
     logo.style.borderRadius = "10px";
     document.body.insertBefore(logo, document.body.firstChild);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide the leave list initially
+   
+    // Select all staff rows and add event listeners
+    let staffRows = document.querySelectorAll(".staff-row");
+    staffRows.forEach(row => {
+        row.addEventListener("click", function () {
+            let leaveTable = document.getElementById("leaveTable");
+            // Toggle the leave list
+            if (leaveTable.style.display === "none") {
+                leaveTable.style.display = "table";
+            } else {
+                leaveTable.style.display = "none";
+            }
+        });
+    });
 });
